@@ -12,8 +12,8 @@ panic: ./main flag redefined: v
 ... stack trace follows
 ```
 
-How to Test the Fix
-===================
+Steps to Test the Fix
+=====================
 
 ```
 # Inside the same directory, clone the glog repo
