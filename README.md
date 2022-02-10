@@ -22,7 +22,8 @@ $ pushd glog
 
 # Switch to the repo and branch that has the fix
 $ git remote add gurjeet https://github.com/gurjeet/glog
-$ git checkout gurjeet/option_to_not_pollute_flags
+$ git fetch --all
+$ git checkout option_to_not_pollute_flags
 # Alternatively, apply the patch included in this repository
 #$ patch -p1 < ../bugfix.patch
 
