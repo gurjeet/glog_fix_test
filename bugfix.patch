@@ -1,16 +1,24 @@
+commit febb3c4ada951d33fe359d53b743b90068931f4f
+Author: Gurjeet Singh <gurjeet@singh.im>
+Date:   Thu Feb 10 11:46:18 2022 -0800
+
+    Allow the user to prefix our flags' names
+
 diff --git a/glog.go b/glog.go
-index 718c34f..9c72863 100644
+index 718c34f..ebb235e 100644
 --- a/glog.go
 +++ b/glog.go
-@@ -395,13 +395,23 @@ type flushSyncWriter interface {
+@@ -395,13 +395,25 @@ type flushSyncWriter interface {
  	io.Writer
  }
  
-+var OptionPrefix string
++// Allow the user to set this variable at build-time, to prefix our flags'
++// names with something of their choice.
++var FlagPrefix string
 +
 +func prefix(s string) string {
-+	if OptionPrefix != "" {
-+		return OptionPrefix + s
++	if FlagPrefix != "" {
++		return FlagPrefix + s
 +	}
 +
 +	return s
